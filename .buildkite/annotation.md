@@ -1,4 +1,4 @@
-✨ **You've run a build!** ✨
+✨ **You've run a build, awesome!** ✨
 
 ![Party](https://media.giphy.com/media/GeimqsH0TLDt4tScGw/giphy.gif)
 
