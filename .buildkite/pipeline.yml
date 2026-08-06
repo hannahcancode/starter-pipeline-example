@@ -7,10 +7,11 @@ steps:
     command: echo "Test the rocket"
     key: test
     depends_on: build
+    if: build.env("BUILDKITE_GITHUB_PULL_REQUEST_STACK_POSITION") == "1"
 
   - label: ":rocket: Deploy"
     command: |
       echo "Launch the rocket"
       cat .buildkite/annotation.md | buildkite-agent annotate --style "success"
     key: deploy
-    depends_on: test
+    if: build.env("BUILDKITE_GITHUB_PULL_REQUEST_STACK_POSITION") == "2"
